@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+    <div class="container">
+        <table class="table">
+            <tr style="text-align:left">
+                <td><strong>TOTAL</strong></td>
+                <td></td>
+                <td></td>
+                <td>{{total_posts}}</td>
+                <td></td>
+            </tr>
+            <tr style="text-align:left">
+                <th>TITLE</th>
+                <th>TOPICS</th>
+                <th>TIME</th>
+                <th>DELETE</th>
+            </tr>
+            {% for post_output in posts_output %}
+                <tr style="text-align:left">
+                    <td><a href="/posts/{{post_output[2]}}{{post_output[1]}}">{{post_output[2]}}</a></td>
+                    <td>{{post_output[5]}}</td>
+                    <td>{{post_output[4]}}</td>
+                    <td><a href="/delete/{{post_output[0]}}">DELETE THIS POST?</a></td>
+                </tr>
+            {% endfor %}
+        </table>
+        <table class="table">
+            <tr style="text-align:left">
+                <td><strong>TOTAL</strong></td>
+                <td></td>
+                <td></td>
+                <td>{{total_businesses}}</td>
+                <td></td>
+            </tr>
+            <tr style="text-align:left">
+                <th>TITLE</th>
+                <th>BUSINESS</th>
+                <th>TIME</th>
+                <th>DELETE</th>
+            </tr>
+            {% for business_output in businesses_output %}
+                <tr style="text-align:left">
+                    <td><a href="/campaigns/{{business_output[2]}}{{business_output[1]}}">{{business_output[2]}}</a></td>
+                    <td>{{business_output[5]}}</td>
+                    <td>{{business_output[4]}}</td>
+                    <td><a href="/delete_campaign/{{business_output[0]}}">DELETE THIS POST?</a></td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Business Campaigns
+{% endblock %}
+
+{% block main %}
+    {% if search != None %}
+    <p style="text-align:left">{{length}} search results for <strong>{{search}}</strong></p>
+    {% else %}
+    {% endif %}
+    <div class="container">
+        <table class="table">
+            <tr style="text-align:left">
+                <th>TITLE</th>
+                <th>BUSINESS</th>
+                <th>USER</th>
+                <th>TIME</th>
+            </tr>
+            {% for campaign_output in campaigns_output %}
+                <tr style="text-align:left">
+                    <td><a href='/campaigns/{{campaign_output[2]}}{{campaign_output[1]}}'>{{campaign_output[2]}}</a></td>
+                    <td>{{campaign_output[5]}}</td>
+                    <td>{{campaign_output[6]}}</td>
+                    <td>{{campaign_output[4]}}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+ {% block title %}
+BEST COFFEE IN SYDNEY{% endblock %}
+{% block main %}
+<p><strong>BEST COFFEE IN SYDNEY</strong></p>
+<p style="text-align:left">The Rustic cafe is proud to serve the best coffee in Sydney made by the best barista ever, Tony!!!</p>
+<p style="text-align:left"></p>
+<p style="text-align:left">Please ask for barista Tony when you walk in. </p>
+<p style="text-align:left"></p>
+<p style="text-align:left">Location: Shop 3024A, Top Ryde city shopping center.</p>
+<p style="text-align:left"></p>
+<p style="text-align:left">Openning hours: 7:00 a.m - 4:00 p.m            </p>
+<p style="text-align:left">        </p>
+{% if session.user_id %}
+<p><a href = "/">Homepage</a></p>
+{% else %}<p><a href = "/register">Register</a></p>
+<p><a href = "/login">Login</a></p>
+<p><a href = "/">Homepage</a></p>
+{% endif %}
+{% endblock %}

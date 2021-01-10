@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Upload
+{% endblock %}
+
+{% block main %}
+    <form action="/post" method="post">
+        <div class="form-group">
+            <p>What would you like to upload?</p>
+            <select name="upload" class="form-control" required>
+                <option value="social">Social issues</option>
+                <option value="business">Business campaign</option>
+            </select>
+        </div>
+        <button class="btn btn-primary" type="submit">Upload</button>
+    </form>
+{% endblock %}

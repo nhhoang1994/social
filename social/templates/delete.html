@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    DELETE
+{% endblock %}
+
+{% block main %}
+    <form action="/delete/{{postid}}" method="post">
+        <p>You are about to delete post title: {{title}} - id: {{postid}} posted at {{time}}</p>
+        <p>This action is irreversible. Your post will be gone forever. Please confirm below:</p>
+        <div class="form-group">
+            <input class="form-control" name="confirmation" placeholder="Type in 'yes' to confirm" type="text" required>
+        </div>
+        <button class="btn btn-primary" type="submit">Delete</button>
+    </form>
+{% endblock %}

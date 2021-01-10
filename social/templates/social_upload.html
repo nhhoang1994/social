@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Upload
+{% endblock %}
+
+{% block main %}
+    <form action="/socialupload" method="post">
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="title" placeholder="Enter post title" type="text" rows="1" cols="20" required>
+            {{title}}
+        </div>
+        <div class="form-group">
+            <input class="form-control" name="topic" placeholder="Topics: racism, feminism, ..." type="text" required>
+            {{topic}}
+        </div>
+        <div>
+        <textarea class="form-control" id="post" name="body" placeholder="Enter your post here" rows="50" cols="100" required>
+            {{body}}
+        </textarea>
+        </div>
+        <button class="btn btn-primary" type="submit">Post</button>
+    </form>
+{% endblock %}

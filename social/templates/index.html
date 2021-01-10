@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Social Posts
+{% endblock %}
+
+{% block main %}
+
+    {% if search != None %}
+    <p style="text-align:left">{{length}} search results for <strong>{{search}}</strong></p>
+    {% else %}
+    {% endif %}
+    <div class="container">
+        <table class="table">
+            <tr style="text-align:left">
+                <th>TITLE</th>
+                <th>TOPICS</th>
+                <th>USER</th>
+                <th>TIME</th>
+            </tr>
+            {% for post_output in posts_output %}
+                <tr style="text-align:left">
+                    <td><a href='/uploads/{{post_output[2]}}{{post_output[1]}}'>{{post_output[2]}}</a></td>
+                    <td>{{post_output[6]}}</td>
+                    <td>{{post_output[5]}}</td>
+                    <td>{{post_output[4]}}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+{% endblock %}

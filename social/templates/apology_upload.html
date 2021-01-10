@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Upload
+{% endblock %}
+
+{% block main %}
+    <p>Error code: {{top}}.</p><p><strong> {{bottom}}</strong></p>
+    <p><a href = '/upload/{{title}}{{topic}}{{body}}'></a>Click here</a> to go back to upload page</p>
+{% endblock %}

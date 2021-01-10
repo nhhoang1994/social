@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    About
+{% endblock %}
+
+{% block main %}
+    <p style="text-align:left;">T3 AWARENESS is the next generation website promoting awareness of social issues and local businesses in Australia. You can visit out websites to learn
+    about the latest information on different social issues, social awareness groups, and social events as well as to discover products/services provided by
+    your local businesses. These information are provided by our own users. We are proud of our large pool of users and we would like to thank of all them for their
+    contributions to the site. </p>
+    <p style="text-align:left">To view information about different social issues, simply go to our homepage or <a href="/">here</a>. To view information about local businesses, click on the
+    Business section at the top left corner or <a href="/business">click here</a>. To search for social issues post, simply fill out the search bar
+    at the top and click search. However, to search for local businesses, please navigate to the business section first before submitting your queries. </p>
+    <p style="text-align:left;">Our website is completely free-to-use and ad-free. You can read all the information on our website at any time. You can also upload articles
+    about your own local businesses or your own take about a particular social issue for everyone to read. However, to make an upload, you need to register for
+    an user account at our website and your posts need to be approved by our admins.
+    Please click on the link at the top right corner or <a href="/register">click here </a>to register for an acocunt. </p>
+    <p style="text-align:left;">Our team comprise of talented and dedicated individuals who are committed to the social betterment of Australia.</p>
+    <p style="text-align:left;"><a href="/members/Tony Nguyen-tony">Tony Nguyen</a></p>
+    <p style="text-align:left;"><a href="/members/Opinder Gill-opinder">Opinder Kaur</a></p>
+    <p style="text-align:left;"><a href="/members/Muhammad Adnan-adnan">Muhammad Adnan</a></p>
+    <p style="text-align:left;"><a href="/members/Gurvinder Kaur-gurvinder">Gurvinder Kaur</a></p>
+    <p style="text-align:left;"><a href="/members/Avneet Kaur-avneet">Avneet Kaur</a></p>
+    <p style="text-align:left;"><a href="/members/Hongliang Hou-hongliang">Hongliang Hou</a></p>
+    {% if session.user_id %}
+    <p><a href = "/">Homepage</a></p>
+    {% else %}
+    <p><a href = "/register">Register</a></p>
+    <p><a href = "/login">Login</a></p>
+    <p><a href = "/">Homepage</a></p>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+ {% block title %}
+BEST BURGER IN SYDNEY{% endblock %}
+{% block main %}
+<p><strong>BEST BURGER IN SYDNEY</strong></p>
+<p style="text-align:left">            </p>
+<p style="text-align:left">        The burger shops provides the best burger in Sydney.</p>
+<p style="text-align:left"></p>
+<p style="text-align:left">Delivery and walk in</p>
+<p style="text-align:left"></p>
+<p style="text-align:left">Location: Top Ryde city</p>
+<p style="text-align:left"></p>
+<p style="text-align:left">Openning hours: 10 a.m - 10 p.m every day.</p>
+{% if session.user_id %}
+<p><a href = "/">Homepage</a></p>
+{% else %}<p><a href = "/register">Register</a></p>
+<p><a href = "/login">Login</a></p>
+<p><a href = "/">Homepage</a></p>
+{% endif %}
+{% endblock %}

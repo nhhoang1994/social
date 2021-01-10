@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Profile
+{% endblock %}
+
+{% block main %}
+
+    <div class="container">
+        <table class="table">
+            <tr style="text-align:left">
+                <th>USER</th>
+                <th>EMAIL</th>
+                <th>PASSWORD</th>
+                <th>HISTORY</th>
+            </tr>
+                <tr style="text-align:left">
+                    <td>{{users[0]}}</a></td>
+                    <td>{{users[1]}}</td>
+                    <td><a href="/pwchange">Click here to change password</a></td>
+                    <td><a href="/history">Click here to see your posts</a></td>
+                </tr>
+            </tr>
+        </table>
+    </div>
+{% endblock %}
